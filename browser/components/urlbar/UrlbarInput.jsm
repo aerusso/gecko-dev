@@ -508,7 +508,8 @@ class UrlbarInput {
   handleRevert() {
     this.window.gBrowser.userTypedValue = null;
     this.setURI(null, true);
-    if (this.value && this.focused) {
+    if (this.value && this.focused &&
+        !Services.prefs.getBoolPref("ui.nativeWidgetBehavior", false) ) {
       this.select();
     }
   }
