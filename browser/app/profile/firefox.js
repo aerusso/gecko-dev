@@ -1451,6 +1451,9 @@ pref("identity.fxaccounts.commands.enabled", true);
 // Default is 24 hours.
 pref("identity.fxaccounts.commands.missed.fetch_interval", 86400);
 
+// Uniformly use native widget behavior
+pref("ui.nativeWidgetBehavior", false);
+
 // Whether we should run a test-pattern through EME GMPs before assuming they'll
 // decode H.264.
 pref("media.gmp.trial-create.enabled", true);
