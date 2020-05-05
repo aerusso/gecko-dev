@@ -1849,6 +1849,7 @@ class UrlbarInput {
   _maybeSelectAll() {
     if (
       !this._preventClickSelectsAll &&
+      !Services.prefs.getBoolPref("ui.nativeWidgetBehavior", false) &&
       this._compositionState != UrlbarUtils.COMPOSITION.COMPOSING &&
       this.document.activeElement == this.inputField &&
       this.inputField.selectionStart == this.inputField.selectionEnd

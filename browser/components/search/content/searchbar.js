@@ -438,6 +438,7 @@
     _maybeSelectAll() {
       if (
         !this._preventClickSelectsAll &&
+        !Services.prefs.getBoolPref("ui.nativeWidgetBehavior", false) &&
         document.activeElement == this._textbox &&
         this._textbox.selectionStart == this._textbox.selectionEnd
       ) {
